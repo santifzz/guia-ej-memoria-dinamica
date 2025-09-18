@@ -12,12 +12,14 @@ int main()
     int *v, tam;
     cout << "Ingrese el tamaño del vector:" << endl;
     cin >> tam;
-    v = new int[tam];
+
+    v = new int[tam]; ///pido memoria
 
     cargarVector(v, tam);
 
     cout << contRepetidos(v, tam) << endl;
-    delete []v;
+
+    delete []v; ///Devuelvo la memoria pedida
     return 0;
 }
 
