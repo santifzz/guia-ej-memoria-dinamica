@@ -15,6 +15,11 @@ int main()
 
     v = new int[tam]; ///pido memoria
 
+    if(v==nullptr){ ///evaluo si hay espacio en la memoria
+        cout << "No se pudo asignar memoria. . ." << endl;
+        return -1;
+    }
+
     cargarVector(v, tam);
 
     cout << contRepetidos(v, tam) << endl;
