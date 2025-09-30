@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1759257762 source:d:\users\fleon\onedrive\documents\utn frgp tup\2do cuatrimestre\programación ii\u2 - memoria dinamica\memoria-dinamica-ejercicios\ej-6-memoria-dinamica\main.cpp
+	<iostream>
+	"function.h"
+
+1759257762 source:d:\users\fleon\onedrive\documents\utn frgp tup\2do cuatrimestre\programación ii\u2 - memoria dinamica\memoria-dinamica-ejercicios\ej-6-memoria-dinamica\function.cpp
+	"function.h"
+	<iostream>
+
+1759257219 d:\users\fleon\onedrive\documents\utn frgp tup\2do cuatrimestre\programación ii\u2 - memoria dinamica\memoria-dinamica-ejercicios\ej-6-memoria-dinamica\function.h
+
