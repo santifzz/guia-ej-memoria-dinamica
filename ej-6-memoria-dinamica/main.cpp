@@ -8,10 +8,7 @@ int main()
     const int TAM=5;
     int vec[TAM];
 
-    for(int i=0; i<TAM; i++){
-        cout << "v[" << i << "] = " ;
-        cin >> vec[i];
-    }
+    cargarVector(vec, TAM);
 
     int nuevoTAM;
     int *pares = contNumerosPares(vec, TAM, nuevoTAM);

@@ -46,3 +46,10 @@ int *contNumerosPares(int vec[],  int tam, int &nuevoTam){
 
     return vecAux;
 }
+
+void cargarVector(int vec[], int tam){
+    for(int i=0; i<tam; i++){
+        cout << "v[" << i << "] = " ;
+        cin >> vec[i];
+    }
+}
