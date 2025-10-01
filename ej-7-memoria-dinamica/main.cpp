@@ -6,34 +6,39 @@ using namespace std;
 void cargarLibros(string v[], int tam);
 void mostrarLibros(string v[], int tam);
 int mostrarMenu(int opcion);
-void tiempoLectura(const string v[], int tam);
+void tiempoLectura(string v[], int tam);
 
 int main()
 {
     int tam;
     int opc_elegida;
-    string  *vec;
+
     cout << "Ingrese la cantidad de libros que desea cargar:  "<< endl;
     cin >>  tam;
     cin.ignore();
     system("cls");
 
-    vec = new string[tam];
+    string  *vec = new string[tam];
+    int *vec_tiempo_lectura = new int[tam];
 
     if(vec == nullptr) exit(101);
 
     cargarLibros(vec, tam);
+    system("cls");
 
     while(true){
+    system("cls");
     opc_elegida = mostrarMenu(opc_elegida);
 
         switch(opc_elegida){
         case 1:
+            system("cls");
             mostrarLibros(vec, tam);
             system("pause");
             break;
         case 2:
             tiempoLectura(vec, tam);
+            system("pause");
             break;
         case 3:
             cout << "Case 3" << endl;
@@ -60,7 +65,6 @@ void mostrarLibros(string v[], int tam){
 }
 
 int mostrarMenu(int opcion){
-        system("cls");
         cout << "---------- MENU ----------" << endl;
         cout << "1. Mostrar listado." << endl;
         cout << "2.Tiempo de lectura." << endl;
@@ -72,12 +76,21 @@ int mostrarMenu(int opcion){
 }
 
 void tiempoLectura(string v[], int tam){
-     string vec_aux[tam];
+    string libroBuscado;
+    cin.ignore();
+    cout << "Ingrese el nombre del libro a buscar: " ;
+    getline(cin, libroBuscado);
+
+    bool existe = false;
+
     for(int i=0; i<tam; i++){
-        cout << "Ingrese el nombre del libro: " ;
-        getline(cin, vec_aux);
-        if(vec_aux[i] == v[i]){
-            cout << "Este libro ya existe" << endl;
+        if(libroBuscado == v[i]){
+            existe = true;
         }
+    }
+    if(existe == true){
+        cout << "Este libro ya existe" << endl;
+    } else {
+        cout << "Este libro no existe" << endl;
     }
 }
